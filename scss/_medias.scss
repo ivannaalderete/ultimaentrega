@@ -1,0 +1,31 @@
+@media (max-width: 862px) {}
+
+/*TABLET*/
+@media (min-width: 700px) and (max-width:1100px) {
+
+    .container {
+        grid-template-areas:
+            "header header header"
+            "nav nav nav"
+            "coachingA coachingB"
+            "coachingC"
+            "footer footer footer";
+    }
+
+    section img {
+        width: 300px;
+    }
+}
+
+/*VISTA MOVIL*/
+@media (max-width: 699px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "nav"
+            "coachingA"
+            "coachingB"
+            "coachingC"
+            "footer";
+    }
+}

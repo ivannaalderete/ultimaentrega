@@ -1,0 +1,276 @@
+/*HEADER*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+html body header {
+  background-color: violet;
+  text-align: justify;
+  background-image: url("../img/coach.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  grid-area: header;
+}
+html body header .container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+html body header .contenedor {
+  background-color: rgb(74, 23, 104);
+  width: 400px;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  box-shadow: 7px 13 px 37 px rgb(131, 18, 131);
+}
+html body header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+html body header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+html body header nav ul li {
+  display: inline-block;
+  list-style: none;
+  /*text-transform: uppercase;
+  font-weight: 900;
+  margin-left: 2rem;
+  letter-spacing: 1px;*/
+}
+html body header nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+  transition: 0.5s;
+  color: rgb(74, 23, 104);
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+html body header nav ul li a:hover {
+  color: rgb(74, 23, 104);
+  transform: scale(1.5) translateY(-5px);
+}
+html body header nav ul li a .brand-title {
+  font-family: var(--ff-sec);
+  font-size: 4rem;
+  color: white;
+}
+html body header nav ul li a .brand-title a:visited {
+  color: rgb(107, 35, 175);
+}
+
+/*FOOTER*/
+footer {
+  background-color: bis;
+}
+footer .instagram {
+  height: 28px;
+  width: 28px;
+}
+footer .linkedin {
+  height: 28px;
+  width: 28px;
+}
+
+html body {
+  background-color: blueviolet;
+}
+html body main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+html body main .box {
+  display: inline-block;
+  border-radius: 10px;
+  width: 600px;
+  height: 200px;
+  background: linear-gradient(to left, #4cb8c4, #3cd3ad);
+}
+html body main .container {
+  display: grid;
+  grid-template-areas: "header header header" "nav nav nav" "coachingA  coachingB  coachingC" "coachingA  coachingB  coachingC" "footer footer footer";
+}
+html body main .container section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 10px 2px 5px 0px rgba(223, 181, 243, 0.75);
+  box-sizing: border-box;
+  /*RESPONSIVE*/
+  text-align: center;
+  /*GRID*/
+}
+html body main .container section img {
+  width: 300px;
+}
+html body main .container section .coachingA {
+  grid-area: coachingA;
+}
+html body main .container section .coachingB {
+  grid-area: coachingB;
+}
+html body main .container section .coachingC {
+  grid-area: coachingC;
+}
+html body main .container section div setItem {
+  width: 100%;
+  vertical-align: middle;
+}
+html body main button {
+  height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: #ab4493;
+  border-color: #ab4493;
+  border-style: solid;
+  border-radius: 10px;
+  width: 420px;
+  cursor: pointer;
+}
+html body main button .toggle-button {
+  position: absolute;
+  top: 1.03rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+html body main button .toggle-button:bar {
+  height: 3px;
+  width: 100%;
+  background-color: rgb(137, 24, 202);
+  border-radius: 10px;
+}
+html body main button .formP {
+  color: rgb(223, 203, 203);
+}
+html body h1 {
+  text-align: center;
+  color: blueviolet;
+  -webkit-animation-name: texto;
+          animation-name: texto;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+html body h2 {
+  text-align: center;
+  color: blueviolet;
+  -webkit-animation-name: texto;
+          animation-name: texto;
+}
+
+img {
+  width: 40rem;
+  border-radius: 4px;
+}
+
+.parrafo {
+  text-align: center;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(230, 223, 223);
+  margin-left: 10px;
+}
+
+/*TABLET*/
+@media (min-width: 700px) and (max-width: 1100px) {
+  .container {
+    grid-template-areas: "header header header" "nav nav nav" "coachingA coachingB" "coachingC" "footer footer footer";
+  }
+  section img {
+    width: 300px;
+  }
+}
+/*VISTA MOVIL*/
+@media (max-width: 699px) {
+  .container {
+    grid-template-areas: "header" "nav" "coachingA" "coachingB" "coachingC" "footer";
+  }
+}
+/*FORMULARIO*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #f17ff1, #7e53ce);
+}
+
+.contenedor {
+  background-color: #990e92;
+  width: 400px;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  box-shadow: 7px 13px 37px rgb(131, 18, 131);
+}
+.contenedor h1 {
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.contenedor .control {
+  width: 100%;
+  background-color: #a71fc2;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #e1e3e7;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+.contenedor .control:focus {
+  height: 60px;
+}
+.contenedor .boton {
+  width: 100%;
+  height: 45px;
+  margin-top: 15px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  background: linear-gradient(to left top, #a70099, #720935);
+  font-size: 20px;
+}
+.contenedor .boton:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+.contenedor .boton:active {
+  transform: translateY(3px);
+}/*# sourceMappingURL=estilo.css.map */

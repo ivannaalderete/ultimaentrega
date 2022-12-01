@@ -1,0 +1,94 @@
+/*HEADER*/
+@mixin anclas {
+    text-decoration: none;
+    color: $color-fuentes-secundario;
+    padding: 1rem;
+    display: block;
+    transition: 0.5s;
+}
+
+html {
+    body {
+        header {
+            background-color: $color-botones-secundario;
+            text-align: justify;
+
+            background-image: url("../img/coach.jpeg");
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 40vh;
+            width: 100%;
+            position: relative;
+            grid-area: header;
+
+            .container-fluid {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 2rem;
+            }
+
+            .contenedor {
+                background-color: $color-fondo;
+                width: 400px;
+                padding: 30px;
+                margin: auto;
+                margin-top: 100px;
+                border-radius: 4px;
+                font-family: 'Roboto', sans-serif;
+                color: white;
+                box-shadow: 7px 13 px 37 px $color-boxshadow;
+            }
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: white;
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+
+
+                    li {
+                        display: inline-block;
+                        list-style: none;
+                        /*text-transform: uppercase;
+                    font-weight: 900;
+                    margin-left: 2rem;
+                    letter-spacing: 1px;*/
+
+                        a {
+                            @include anclas;
+                            color: $color-fondo;
+                            text-transform: uppercase;
+                            margin-left: 10px;
+
+                            &:hover {
+                                color: rgb(74, 23, 104);
+                                transform: scale(1.5) translateY(-5px);
+                            }
+
+                            .brand-title {
+                                font-family: var(--ff-sec);
+                                font-size: 4rem;
+                                color: white;
+                            }
+
+                            .brand-title a:visited {
+                                color: rgb(107, 35, 175);
+                            }
+
+
+                        }
+
+
+                    }
+                }
+            }
+        }
+    }
+}
